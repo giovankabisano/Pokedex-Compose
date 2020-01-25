@@ -11,10 +11,10 @@ import androidx.ui.core.dp
 import androidx.ui.foundation.shape.corner.RoundedCornerShape
 import androidx.ui.graphics.Color
 import androidx.ui.layout.*
-import androidx.ui.layout.R
 import androidx.ui.material.*
 import androidx.ui.material.surface.Surface
 import androidx.ui.tooling.preview.Preview
+import giovanka.pokedex.R
 import giovanka.pokedex.ui.map.MapScreen
 import giovanka.pokedex.ui.pokemonDetail.PokemonDetailScreen
 import giovanka.pokedex.ui.pokemonList.PokemonListScreen
@@ -74,19 +74,19 @@ private fun AppDrawer(
         Divider(color = Color(0x14333333))
         DrawerButton(
             icon = R.drawable.ic_home,
-            label = "Home",
-            isSelected = currentScreen == Screen.Home
+            label = "Pokemon List",
+            isSelected = currentScreen == Screen.PokemonList
         ) {
-            navigateTo(Screen.Home)
+            navigateTo(Screen.PokemonList)
             closeDrawer()
         }
 
         DrawerButton(
             icon = R.drawable.ic_interests,
-            label = "Interests",
-            isSelected = currentScreen == Screen.Interests
+            label = "Map",
+            isSelected = currentScreen == Screen.Map
         ) {
-            navigateTo(Screen.Interests)
+            navigateTo(Screen.Map)
             closeDrawer()
         }
     }
